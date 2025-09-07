@@ -20,8 +20,7 @@
             </div>
             <div class="output-group">
                 <label>Epoch Timestamp:</label>
-                <input type="text" id="human-output-epoch" readonly>
-                </button>
+                <input type="text" id="human-output-epoch" readonly onclick="this.select(); document.execCommand('copy'); alert('Copied!');">
             </div>
         </section>
 
@@ -36,8 +35,7 @@
             </div>
             <div class="output-group">
                 <label>Human-Readable Date:</label>
-                <input type="text" id="epoch-output" readonly>
-                </button>
+                <input type="text" id="epoch-output" readonly onclick="this.select(); document.execCommand('copy'); alert('Copied!');">
             </div>
         </section>
 
@@ -61,8 +59,7 @@
             
             <div class="output-group">
                 <label>Converted Date & Time:</label>
-                <input type="text" id="timezone-output-datetime" readonly>
-                </button>
+                <input type="text" id="timezone-output-datetime" readonly onclick="this.select(); document.execCommand('copy'); alert('Copied!');">
             </div>
         </section>
     </div>
