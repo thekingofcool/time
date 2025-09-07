@@ -1,0 +1,148 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.converter-module {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+.input-group, .output-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.input-group label, .output-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    min-width: 150px; /* Ensures labels align nicely */
+    text-align: right;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    flex-grow: 1; /* Allows input fields to take available space */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+input[type="datetime-local"] {
+    min-width: 200px;
+}
+
+button {
+    padding: 10px 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    background-color: #1f618d;
+}
+
+.copy-btn {
+    background-color: #1abc9c;
+}
+
+.copy-btn:hover {
+    background-color: #16a085;
+}
+
+.copy-btn:active {
+    background-color: #0e8c7a;
+}
+
+input[readonly] {
+    background-color: #eef1f3;
+    cursor: default;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 30px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.7em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    .input-group, .output-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .input-group label, .output-group label {
+        text-align: left;
+        min-width: auto;
+    }
+    input[type="text"],
+    input[type="datetime-local"],
+    select, button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    button {
+        margin-bottom: 0; /* Remove bottom margin for the last element in a group */
+    }
+}

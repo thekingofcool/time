@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mess With Time</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mess With Time</h1>
+
+        <section class="converter-module">
+            <h2>Human-Readable Date to Epoch</h2>
+            <div class="input-group">
+                <label for="human-input-date">Date & Time:</label>
+                <input type="text" id="human-input-date">
+                <button onclick="convertHumanToEpoch()">Convert</button>
+            </div>
+            <div class="output-group">
+                <label>Epoch Timestamp:</label>
+                <input type="text" id="human-output-epoch" readonly>
+                </button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="converter-module">
+            <h2>Epoch to Human-Readable Date</h2>
+            <div class="input-group">
+                <label for="epoch-input">Epoch Timestamp:</label>
+                <input type="text" id="epoch-input" placeholder="e.g., 1757241406">
+                <button onclick="convertEpochToHuman()">Convert</button>
+            </div>
+            <div class="output-group">
+                <label>Human-Readable Date:</label>
+                <input type="text" id="epoch-output" readonly>
+                </button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="converter-module">
+            <h2>Timezone Converter</h2>
+            <div class="input-group">
+                <label for="timezone-input-datetime">Date & Time:</label>
+                <input type="text" id="timezone-input-datetime">
+                <button onclick="convertTimezone()">Convert</button>
+            </div>
+            <div class="input-group">
+                <label for="from-timezone">From Timezone:</label>
+                <select id="from-timezone"></select>
+            </div>
+            <div class="input-group">
+                <label for="to-timezone">To Timezone:</label>
+                <select id="to-timezone"></select>
+            </div>
+            
+            <div class="output-group">
+                <label>Converted Date & Time:</label>
+                <input type="text" id="timezone-output-datetime" readonly>
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
